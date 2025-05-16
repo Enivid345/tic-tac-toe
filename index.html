@@ -786,7 +786,7 @@ window.alert = function(message, title = "Notice", icon = "info") {
         }
       }
       function goToMainMenu() {
-        window.location.reload();
+        window.location.href = `${window.location.protocol}//${window.location.host}`;
       }
       // Bot Move - 85% Strategic, 15% Random
       function botMove() {
