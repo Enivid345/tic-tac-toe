@@ -3,15 +3,23 @@ const http = require("http");
 const { Server } = require("socket.io");
 const path = require("path");
 const { nanoid } = require("nanoid");
+const cors = require("cors")
 
 const app = express();
 const server = http.createServer(app);
+app.use(cors({
+  origin: ["https://naxxex-tic-tac-toe.vercel.app"],
+  credentials: true,
+}));
+
 const io = new Server(server, {
   cors: {
-    origin: "https://naxxex-tic-tac-toe.vercel.app/", // Vercel frontend URL
+    origin: ["https://naxxex-tic-tac-toe.vercel.app"],
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
+
 
 // Game state
 let games = {};
