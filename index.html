@@ -475,7 +475,7 @@
         <button onclick="copyRoomId()">Copy Room Id & And Enter Room</button>
       </div>
 
-      <input type="text" id="roomId" placeholder="Enter Room ID" />
+      <input type="text" id=""roomIdInput" placeholder="Enter Room ID" />
       <button onclick="joinRoom()">Join Game</button>
 
       <button class="back-btn" onclick="goBack()">Back to Main Menu</button>
@@ -562,7 +562,7 @@ window.alert = function(message, title = "Notice", icon = "info") {
       }
 
       function joinRoom() {
-        const roomIdInput = document.getElementById("roomId").value.trim();
+        const roomIdInput = document.getElementById("roomIdInput").value.trim();
         let playerName2 = document.getElementById("playerName").value;
         firstStatus = false;
         onlineMode = true;
